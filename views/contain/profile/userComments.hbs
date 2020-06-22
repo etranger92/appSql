@@ -1,0 +1,29 @@
+<div id="main_comments_section">
+    <section class="add_comments">
+        <h4> Add your new comments {{user_name}}</h4>
+        <article>
+            <input id="new_comment" data-state="" name="comment" type="text" placeholder="Write here" required>
+            <input name="userId" value="{{user_id}}" style="display:none;" id="userId">
+            <p id="notification-comment" style="color:green;"> </p>
+            <input type="submit" value="ADD" class="submit_comment" id="submit_comment">
+        </article>
+        <p>{{session}}</p>
+    </section>
+    <section class="retrieve_comments">
+        <h4> Old comments</h4>
+        <div id="insert-comment">
+            <ul id="contain-comments">
+                {{#if comments }}
+                {{#each comments }}
+                <li>
+                    <input data-id={{id_comments}} type="text" value={{comments}} disabled>
+                    <i class='fas fa-backspace icon_delete' style="align-self:center"></i>
+                    <i style="margin-left:0.5rem;" class="fa fa-align-left icon_modify"></i>
+                </li>
+
+                {{/each}}
+                {{/if}}
+            </ul>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,35 @@
+History of this app
+
+Issues faced:
+
+- the primary key automatic was not working. I had to pass "NULL" into VALUE(NULL, name, password)
+- Date should be under the form '2010-01-22';
+- My async doesn't work as expected with mysql as the library does not support the syntaxe. I had to pass to mysql2.
+- My axios was not working anymore and sent me a "reference error". I did try to remove and install again the dependency but with no success. I added to insert the min.js in my html and it worked.
+- cannot add event to an html element that has not been add yet. So, I created a function addDeleteEvent that will be called when I append a childnode.
+- I couldn't connect remotely to DB as my SSH in the website was turn off for security. So, I turned it on.
+- I updated my online website but I didn't see the change on the browser. I thought it was due to the server but all pages were updated. I deleted the cache from my browser and I was able to see the change. This is the interest of mocking cache with gulp if my website is going to change often.
+
+
+Issue not resolved:
+
+- views does not work when I put it inside backend. I did try to add the correct path but I cannot find the way
+
+Improvements: 
+
+- Could suggest name to the user when he hits the message "user name already taken" by adding random number.
+- Need to solve my issue with my  yarn dependency with axio, why it's not working. I will get ride of the https//axios.mins.
+  
+
+Reminder:
+
+- async/await always return a promise.
+- middleware it's a function between a request (req) and a response (res) that will perfom some action. next() is a method in express that will call the next middleware.
+
+
+tests issue;
+
+- Had a message error related to addEventListener when running the test. I had to put my whole code into document.addEventListener('DOMContentLoaded', function () {}.
+- environnment with jest and import I had to change the config and add .babelrc
+
+

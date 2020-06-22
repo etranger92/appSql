@@ -1,0 +1,56 @@
+/***************comments page***************/
+#main_comments_section {
+  display: flex;
+  justify-content: space-around;
+}
+
+#main_comments_section h4 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.add_comments article {
+  opacity: 1;
+  height: auto;
+  transform: none;
+}
+
+.submit_comment {
+  width: 5vw;
+  margin: auto;
+}
+
+.submit_comment:hover {
+  cursor: pointer;
+}
+
+input[data-state="invalid"] {
+  border-color: hsl(0, 76%, 50%);
+}
+
+/* Show green borders when valid */
+input[data-state="valid"] {
+  border-color: hsl(120, 76%, 50%);
+}
+
+/*  Display comments*/
+
+
+#contain-comments {
+  display: flex;
+  flex-direction: column;
+}
+
+#contain-comments li {
+  display: flex;
+}
+
+.delete_comment {
+  cursor: pointer;
+}
+
+#contain-comments input {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
